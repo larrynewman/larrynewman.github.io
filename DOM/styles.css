@@ -1,0 +1,16 @@
+.coolTitle {
+	text-align: left;
+	font-family: 'Oswald', Helvetica, sans-serif;
+	font-size: 30px;
+	letter-spacing: 3px;
+	word-spacing: -8px;
+	color: tomato;
+}
+
+.done {
+	text-decoration: line-through;
+}
+
+.deletebtn {
+	margin-left: 15px;
+}
