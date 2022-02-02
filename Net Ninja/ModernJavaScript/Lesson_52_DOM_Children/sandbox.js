@@ -1,6 +1,6 @@
 // GET AN ELEMENT BY ID
 // const title = document.getElementById('page-title');
-// console.log(title);
+// console.log(title.innerHTML);
 
 // GET ELEMENTS BY THEIR CLASS NAME
 // const errors = document.getElementsByClassName('error');
@@ -71,16 +71,16 @@
 // title.style.borderTopColor = 'orange';
 
 // HOW TO SHOW LIST OF CLASSES FOR ANY HTML ELEMENT...
-const paras = document.querySelectorAll('p');
+// const paras = document.querySelectorAll('p');
 
-paras.forEach((p) => {
-	if (p.textContent.includes('error')) {
-		p.classList.add('error');
-	}
-	if (p.textContent.includes('success')) {
-		p.classList.add('success');
-	}
-});
+// paras.forEach((p) => {
+// 	if (p.textContent.includes('error')) {
+// 		p.classList.add('error');
+// 	}
+// 	if (p.textContent.includes('success')) {
+// 		p.classList.add('success');
+// 	}
+// });
 
 // HOW TO TOGGLE CLASSES
 // const title = document.querySelector('.title');
@@ -93,29 +93,29 @@ paras.forEach((p) => {
 
 // HOW TO CREATE AN ARRAY OF DOM ELEMENTS
 
-const article = document.querySelector('article');
+// const article = document.querySelector('article');
 
 // THIS CREATES A COLLECTION...THE PROBLEM WITH THIS IS THAT WE CAN'T RUN forEach on a collection, so we need to do the same thing with in an array
-console.log(article.children);
+// console.log(article.children);
 
 // THIS CREATES AN ARRAY...
-console.log(Array.from(article.children));
+// console.log(Array.from(article.children));
 
 // TO ADD A NEW CLASS TO EACH OF THE CHILD ELEMENTS OF THE ARTICLE...
-Array.from(article.children).forEach((child) => {
-	child.classList.add('article-element');
-});
+// Array.from(article.children).forEach((child) => {
+// 	child.classList.add('article-element');
+// });
 
 // HOW TO GET PARENT...
 const articleTitle = document.querySelector('h2');
-console.log(articleTitle);
-console.log(articleTitle.parentElement);
-console.log(articleTitle.parentElement.parentElement);
-console.log(articleTitle.nextElementSibling);
-console.log(articleTitle.previousElementSibling);
+// console.log(articleTitle);
+// console.log(articleTitle.parentElement);
+// console.log(articleTitle.parentElement.parentElement);
+// console.log(articleTitle.nextElementSibling);
+// console.log(articleTitle.previousElementSibling);
 
 // // chaining
-console.log(articleTitle.nextElementSibling.parentElement.children);
+// console.log(articleTitle.nextElementSibling.parentElement.children);
 // // Line below changes "HTML Collection" above to an array....
 // console.log(Array.from(articleTitle.nextElementSibling.parentElement.children));
 
