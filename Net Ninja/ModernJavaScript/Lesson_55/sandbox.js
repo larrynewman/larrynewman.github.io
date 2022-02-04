@@ -12,8 +12,6 @@ button.addEventListener('click', () => {
 	const li = document.createElement('li');
 	li.textContent = 'Something new to do';
 	ul.prepend(li);
-	// ul.append(li);
-	// ul.innerHTML += '<li>something new</li>';
 });
 
 // const items = document.querySelectorAll('li');

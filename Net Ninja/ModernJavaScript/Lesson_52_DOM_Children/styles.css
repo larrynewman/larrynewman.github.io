@@ -12,3 +12,11 @@ body {
 	color: limegreen;
 	border: 1px dotted limegreen;
 }
+
+.title {
+	color: blue;
+}
+
+.test {
+	color: pink;
+}

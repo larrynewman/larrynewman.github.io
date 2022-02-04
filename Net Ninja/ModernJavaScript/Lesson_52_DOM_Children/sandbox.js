@@ -71,19 +71,20 @@
 // title.style.borderTopColor = 'orange';
 
 // HOW TO SHOW LIST OF CLASSES FOR ANY HTML ELEMENT...
-// const paras = document.querySelectorAll('p');
+const paras = document.querySelectorAll('p');
 
-// paras.forEach((p) => {
-// 	if (p.textContent.includes('error')) {
-// 		p.classList.add('error');
-// 	}
-// 	if (p.textContent.includes('success')) {
-// 		p.classList.add('success');
-// 	}
-// });
+paras.forEach((p) => {
+	if (p.textContent.includes('error')) {
+		p.classList.add('error');
+	}
+	if (p.textContent.includes('success')) {
+		p.classList.add('success');
+	}
+});
 
 // HOW TO TOGGLE CLASSES
-// const title = document.querySelector('.title');
+const title = document.querySelectorAll('.title');
+console.log(title);
 // title.classList.toggle('test');
 
 // HOW TO ADD AND REMOVE CLASSES FROM AN HTML ELEMENT...
@@ -107,7 +108,7 @@
 // });
 
 // HOW TO GET PARENT...
-const articleTitle = document.querySelector('h2');
+// const articleTitle = document.querySelector('h2');
 // console.log(articleTitle);
 // console.log(articleTitle.parentElement);
 // console.log(articleTitle.parentElement.parentElement);

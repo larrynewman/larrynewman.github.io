@@ -5,6 +5,7 @@
 // });
 const ul = document.querySelector('ul');
 
+// HOW TO ADD ITEMS
 const button = document.querySelector('button');
 console.log(button);
 
@@ -16,15 +17,12 @@ button.addEventListener('click', () => {
 	// ul.innerHTML += '<li>something new</li>';
 });
 
+// HOW TO REMOVE A CLICKED ITEM...
 const items = document.querySelectorAll('li');
-
 items.forEach((item) => {
 	item.addEventListener('click', (e) => {
-		// e.target.style.textDecoration = 'line-through';
 		e.target.remove();
-		console.log(e.target);
-		// console.log(e);
-		// console.log('item clicked');
+		// e.items.remove();
 	});
 });
 
