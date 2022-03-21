@@ -2,6 +2,7 @@
 
 const addForm = document.querySelector('.add');
 const list = document.querySelector('.todos');
+const search = document.querySelector('.search input');
 
 const generateTemplate = (todo) => {
 	const html = `
@@ -15,7 +16,7 @@ const generateTemplate = (todo) => {
 
 addForm.addEventListener('submit', (e) => {
 	e.preventDefault();
-	const todo = addForm.add.value.trim();
+	const todo = addForm.add.value.trim().toLowerCase();
 
 	if (todo.length) {
 		generateTemplate(todo);
@@ -24,8 +25,28 @@ addForm.addEventListener('submit', (e) => {
 });
 
 // DELETE TODO LIST ITEM (TRASH ICON)
+// The target event property returns the element that triggered the event.
+
+//The target property gets the element on which the event originally occurred//
+
 list.addEventListener('click', (e) => {
-	if (e.target.classList.contains('delete') {
+	if (e.target.classList.contains('delete')) {
 		e.target.parentElement.remove();
 	}
-}));
+});
+
+// SEARCH
+const filterTodos = (term) => {
+	Array.from(list.children)
+		.filter((todo) => !todo.textContent.toLowerCase().includes(term))
+		.forEach((todo) => todo.classList.add('filtered'));
+
+	Array.from(list.children)
+		.filter((todo) => todo.textContent.toLowerCase().includes(term))
+		.forEach((todo) => todo.classList.remove('filtered'));
+};
+
+search.addEventListener('keyup', () => {
+	const term = search.value.trim().toLowerCase();
+	filterTodos(term);
+});
